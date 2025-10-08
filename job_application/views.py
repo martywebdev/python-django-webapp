@@ -10,7 +10,7 @@ def index(request):
     if request.method == 'POST':
         form = ApplicationForm(request.POST)
         if form.is_valid():
-            # Form.objects.create(**form.cleaned_data)
+            Form.objects.create(**form.cleaned_data)
             
             
             # message_body = f"A new job application was submitted. Thank you, {form.cleaned_data.get('first_name')}"
